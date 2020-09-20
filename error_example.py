@@ -6,6 +6,12 @@ from blueprint_example import *
 app = Flask(__name__) 
 app.register_blueprint(teams)
 
+# make a custom output for 500 error (invalid params in url)
+@app.errorhandler(500)
+def error_handling(error):
+    print("You done screwed this up!")
+    return jsonify({'Error':str(error)})
+
 @app.route('/api') 
 def my_microservice(): 
     print(request)
@@ -17,5 +23,4 @@ def my_microservice():
  
 if __name__ == '__main__': 
     print(app.url_map)
-
-    app.run(debug=True) 
+    app.run() 
