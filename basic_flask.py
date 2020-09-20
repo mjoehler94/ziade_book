@@ -1,5 +1,8 @@
 from flask import Flask, jsonify, request 
 
+# this import was added later as part of the blueprint example
+import blueprint_example
+
 app = Flask(__name__) 
 
 @app.route('/api') 
