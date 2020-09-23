@@ -1,10 +1,10 @@
 from flask import Flask, jsonify, request 
 
 # this import was added later as part of the blueprint example
-from blueprint_example import *
+#from blueprint_example import *
 
 app = Flask(__name__) 
-app.register_blueprint(teams)
+#app.register_blueprint(teams)
 
 @app.route('/api') 
 def my_microservice(): 
@@ -18,4 +18,4 @@ def my_microservice():
 if __name__ == '__main__': 
     print(app.url_map)
 
-    app.run(debug=True) 
+    app.run(debug=False) 
