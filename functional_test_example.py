@@ -12,7 +12,7 @@ class TestApp(unittest.TestCase):
 
         # asserting the body 
         body = json.loads(str(hello.data, 'utf8')) 
-        self.assertEqual(body['Hello'], 'World!') 
+        self.assertEqual(body['Hello'], 'Chewbacca!') 
 
 if __name__ == '__main__': 
     unittest.main() 

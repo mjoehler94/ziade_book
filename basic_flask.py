@@ -10,7 +10,7 @@ app = Flask(__name__)
 def my_microservice(): 
     print(request)
     print(request.environ)
-    response = jsonify({'Hello':'Chewbacca'})
+    response = jsonify({'Hello':'Chewbacca!'})
     print(response)
     print(response.data)
     return response
